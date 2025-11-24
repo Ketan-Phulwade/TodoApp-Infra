@@ -1,0 +1,17 @@
+name: "Terraform_dev"
+
+on: 
+  push:
+    branches:
+      - 'feature/**'
+      - 'main'
+      - 'hotfix/**'
+
+  
+jobs:
+  my_first_job:
+    name: My first job
+    runs-on: ketan-runner
+    steps:
+    - name: my first step
+      run: echo 'Ketan Phulwade'
