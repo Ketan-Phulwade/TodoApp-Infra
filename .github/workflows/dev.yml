@@ -1,7 +1,7 @@
 name: "Terraform_dev"
 permissions:
-  id-token:write
-  contents:read
+  id-token: write
+  contents: read
 on: 
   push:
     branches:
