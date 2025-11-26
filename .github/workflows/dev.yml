@@ -1,5 +1,7 @@
 name: "Terraform_dev"
-
+permissions:
+  id-token: write
+  contents: read
 on: 
   push:
     branches:
@@ -9,9 +11,26 @@ on:
 
   
 jobs:
-  my_first_job:
-    name: My first job
+  Terraform_plan:
+    name: Terraform
     runs-on: ketan-runner
     steps:
-    - name: my first step
-      run: echo 'Ketan Phulwade'
+      - name: Checkout
+        uses: actions/checkout@v6.0.0
+      - name: Install Terraform
+        uses: little-core-labs/install-terraform@v2.0.0
+        with:
+          version: 1.13.0
+      - name: Azure Login
+        uses: Azure/login@v2.3.0
+        with:
+          client-id: aeb784de-6636-4783-a208-46e93d97fd48
+
+          tenant-id: af734fcf-6a49-4af5-8ec9-51df7466b2c5
+
+          subscription-id: 95a90f4b-7e15-47ba-95ab-0d52bac078e4
+  
+          
+      
+  
+          
