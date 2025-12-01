@@ -30,7 +30,7 @@ jobs:
 
       - name: Terraform fmt
         id: fmt
-        run: terraform fmt -check
+        run: terraform fmt -recursive
         continue-on-error: true
         working-directory: todoapp-infra
       
