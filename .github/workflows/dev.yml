@@ -27,6 +27,28 @@ jobs:
           client-id: aeb784de-6636-4783-a208-46e93d97fd48
           tenant-id: af734fcf-6a49-4af5-8ec9-51df7466b2c5
           subscription-id: 95a90f4b-7e15-47ba-95ab-0d52bac078e4
+
+      - name: Terraform fmt
+        id: fmt
+        run: terraform fmt -check
+        continue-on-error: true
+        working-directory: todoapp-infra
+      
+      - name: Terraform Init
+        id: init
+        run: terraform init -input=false
+        working-directory: todoapp-infra
+      
+      - name: Terraform Validate
+        id: validate
+        run: terraform validate -no-color
+        working-directory: todoapp-infra
+      
+      - name: Terraform Plan
+        id: plan
+        run: terraform plan -no-color -input=false
+        continue-on-error: true 
+        working-directory: todoapp-infra
   
           
       
