@@ -8,18 +8,17 @@ terraform {
       #version = "~> 3.66.0"
     }
   }   
-  # backend "azurerm" {
-  #   # resource_group_name  = "ketan-rg"
-  #   # storage_account_name = "strgtfstateketan"
-  #   # container_name       = "tfstateketan"
-  #   # key                  = "ketandevops.terraform.tfstate"
-
-  # }
+   backend "azurerm" {
+       resource_group_name  = "ketan-rg"
+        storage_account_name = "ketanstrg"
+       container_name       = "tfstate"
+     key                  = "dev.terraform.tfstate"
+ }
 }
 
 provider "azurerm" {
   # Configuration options
   features {}
-  subscription_id = "51b6ad96-2bb6-48e5-b566-1d3406221d56"
+  subscription_id = "95a90f4b-7e15-47ba-95ab-0d52bac078e4"
   
 }
