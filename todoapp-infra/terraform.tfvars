@@ -1,6 +1,6 @@
 rg_name           = "rg-ketan"
 location          = "West India"
-vault_name        = "kv-todoapp-ketan"
+vault_name        = "ketan-todoapp-kv"
 vm_username       = "vmadmin"
 vm_password       = "Rajvee@2025"
 sql_username      = "sqladmin"
