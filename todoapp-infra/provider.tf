@@ -10,7 +10,7 @@ terraform {
   }   
    backend "azurerm" {
        resource_group_name  = "ketan-rg"
-        storage_account_name = "ketanstrg"
+        storage_account_name = "strgtfstateketan"
        container_name       = "tfstate"
      key                  = "dev.terraform.tfstate"
  }
